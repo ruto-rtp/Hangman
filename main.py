@@ -1,5 +1,4 @@
-from random import randint, random
-import sys
+from random import randint
 from time import sleep
 import os
 
@@ -42,7 +41,7 @@ def hanged(fails):
 
 def main():
     clean_console()
-    d = open("./[Python] hanged/diccionario.txt", "r")
+    d = open("./diccionario.txt", "r")
     words = d.read()
     d.close()
 
@@ -63,7 +62,6 @@ def main():
             print(line)
 
         # ----- Muestra la palabra a adivinar -----
-        print(word)
         for i in range(0, len_word):
             print(unknown_word[i], end=" ")
         print()
@@ -91,7 +89,4 @@ def main():
 
 
 if __name__ == "__main__":
-    
-
-    # print(LANGUAGES)
     main()

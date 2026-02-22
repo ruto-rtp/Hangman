@@ -1,0 +1,50 @@
+  
+# Hangman Game – Python Terminal Version 🎮
+
+![Python](https://img.shields.io/badge/python-3.x-blue.svg)
+
+![License](https://img.shields.io/badge/license-MIT-green)
+
+A classic Hangman game implemented in Python, played entirely in the terminal. This is the first version of the project, with plans to add multiple languages and a score-saving feature in future iterations.
+
+## 📖 Description
+
+This is a simple yet functional Hangman game where the player must guess a random word letter by letter. For each incorrect guess, a part of the hangman figure is drawn. The game ends when the word is guessed correctly (win) or the hangman figure is completed (loss).
+
+The word is randomly selected from a dictionary file (`diccionario.txt`). The game runs in a loop, clearing the console between turns for a cleaner experience.
+
+## ✨ Features (v1.0)
+
+- Random word selection from a local dictionary file.
+- Interactive terminal interface with a dynamically drawn hangman figure.
+- Case-insensitive input (all letters are converted to lowercase).
+- Visual feedback: shows the current state of the word (with underscores for missing letters) and the hangman.
+- Win/loss messages with the revealed word.
+- Console clearing for a smooth turn-by-turn experience.
+
+## 🎯 How to Play
+
+1. Run the game.
+2. A random word is chosen (you don't see it).
+3. You will see a series of underscores representing each letter of the word.
+4. Enter a single letter (a-z) and press Enter.
+5. If the letter is in the word, it appears in the correct position(s).
+6. If the letter is not in the word, you lose a try and the hangman figure advances.
+7. You have **6 incorrect attempts** before the hangman is complete and you lose.
+8. Guess all letters correctly to win!
+
+## 📋 Requirements
+
+- Python 3.x
+- No external libraries are needed (uses only standard modules: `random`, `time`, `os`).
+
+## 🚀 How to Run
+
+1. Clone this repository or download the source code.
+2. Make sure the file `diccionario.txt` is in the same directory as the Python script (or adjust the path in the code).
+3. Open a terminal in the project folder.
+4. Run the command:
+
+ ```bash
+python main.py
+ ```
