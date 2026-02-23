@@ -51,6 +51,7 @@ def main():
     len_word = len(word) 
     unknown_word = ["_"] * len_word # Crear la palabra con "_"
     fails = 0
+    used_letters = [] # Lista de letras usadas
 
     # Mientras no se adivine la palabra
     while unknown_word != list(word) and fails < 6:
@@ -66,6 +67,11 @@ def main():
             print(unknown_word[i], end=" ")
         print()
 
+        print("[ ", end="")
+        for used_letter in used_letters:
+            print(used_letter, end=", ")
+        print("]")
+
         # ----- Comprobación de la letra -----
         letter = input("Introduce una letra: ").strip().lower()
 
@@ -73,8 +79,14 @@ def main():
             for i in range(0, len_word):
                 if word[i] == letter:
                     unknown_word[i] = letter
+
+        elif letter in used_letters:
+            print(f"La letra {letter} ya ha sido usada")
+
         else:
+            used_letters.append(letter)
             fails += 1
+
             print(f"La letra {letter} no está en la palabra")
         
         sleep(1)
