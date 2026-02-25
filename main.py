@@ -83,6 +83,9 @@ def main():
         elif letter in used_letters:
             print(f"La letra {letter} ya ha sido usada")
 
+        elif len(letter) != 1 or not letter.isalpha():
+            print("Introduce una letra válida")
+
         else:
             used_letters.append(letter)
             fails += 1
