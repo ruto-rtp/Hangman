@@ -18,7 +18,7 @@ The word is randomly selected from a dictionary file (`diccionario.txt`). The ga
 - Random word selection from a local dictionary file.
 - Interactive terminal interface with a dynamically drawn hangman figure.
 - Case-insensitive input (all letters are converted to lowercase).
-- Visual feedback: shows the current state of the word (with underscores for missing letters) and the hangman.
+- Visual feedback: shows the current state of the word (with underscores for missing letters), a list of used letters and the hangman.
 - Win/loss messages with the revealed word.
 - Console clearing for a smooth turn-by-turn experience.
 
